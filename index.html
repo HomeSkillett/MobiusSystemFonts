@@ -20,8 +20,9 @@
     .meta { font-size: 12px; opacity: 0.75; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 16px; }
     .card { border: 1px solid rgba(127,127,127,0.25); border-radius: 14px; padding: 12px; display: grid; grid-template-columns: 48px 1fr; gap: 12px; }
-    .glyph { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; border: 1px solid rgba(127,127,127,0.25); }
-    .glyph span { font-family: "Mobius-System-Icons"; font-size: 28px; line-height: 1; }
+    .glyph { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; border: 1px solid rgba(127,127,127,0.25); cursor: pointer }
+	.glyph:hover { background: #2EBEFC; color:#FFF; }
+	.glyph span { font-family: "Mobius-System-Icons"; font-size: 28px; line-height: 1; }
 	.mobius-font  { font-family: "Mobius-System-Icons"; line-height: 1; }
     .name { font-weight: 600; font-size: 14px; margin: 0; }
     .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; opacity: 0.85; margin: 6px 0 10px; }
@@ -130,6 +131,7 @@
 
         const glyph = document.createElement('div');
         glyph.className = 'glyph';
+		glyph.onclick = () => copyText(char);
         const span = document.createElement('span');
         span.textContent = char;
         glyph.appendChild(span);
