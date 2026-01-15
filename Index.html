@@ -4,11 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mobius System Icons Helper</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     :root { color-scheme: light dark; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; }
+    body { font-family: Roboto,system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif; margin: 24px; color:#555555; font-weight: 300; }
     .wrap { max-width: 1200px; margin: 0 auto; }
-    h1 { font-size: 22px; margin: 0 0 8px; }
+    h1 { font-size: 36px; font-weight: 100; margin: 0 0 8px; color:#105F7E; }
+	  a { text-decoration: none; color:#0075A1;}
+	  a:hover { text-decoration: none; color:#2EBEFC;}
     .sub { opacity: 0.8; margin: 0 0 16px; }
     .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
     input[type="search"] { flex: 1; min-width: 260px; padding: 10px 12px; font-size: 14px; border-radius: 10px; border: 1px solid rgba(127,127,127,0.35); }
@@ -17,15 +22,24 @@
     .card { border: 1px solid rgba(127,127,127,0.25); border-radius: 14px; padding: 12px; display: grid; grid-template-columns: 48px 1fr; gap: 12px; }
     .glyph { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; border: 1px solid rgba(127,127,127,0.25); }
     .glyph span { font-family: "Mobius-System-Icons"; font-size: 28px; line-height: 1; }
+	.mobius-font  { font-family: "Mobius-System-Icons"; line-height: 1; }
     .name { font-weight: 600; font-size: 14px; margin: 0; }
     .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; opacity: 0.85; margin: 6px 0 10px; }
     .btns { display: flex; gap: 8px; flex-wrap: wrap; }
     button { font-size: 12px; padding: 6px 10px; border-radius: 10px; border: 1px solid rgba(127,127,127,0.35); background: transparent; cursor: pointer; }
-    button:hover { border-color: rgba(127,127,127,0.6); }
+    button:hover { border-color: rgba(127,127,127,0.6); background: #2EBEFC; color:#FFF; }
     .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: 18px; padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(127,127,127,0.35); background: rgba(0,0,0,0.75); color: white; font-size: 12px; opacity: 0; pointer-events: none; transition: opacity 120ms ease; }
     .toast.show { opacity: 1; }
     .help { margin-top: 12px; font-size: 12px; opacity: 0.85; line-height: 1.45; }
     .help code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+	.roboto-<uniquifier> {
+		  font-family: "Roboto", sans-serif;
+		  font-optical-sizing: auto;
+		  font-weight: 250;
+		  font-style: normal;
+		  font-variation-settings:
+			"wdth" 100;
+		}
   </style>
 
   <style>
@@ -51,7 +65,8 @@
     </div>
 
     <div class="help">
-      <div><strong>WPF tip:</strong> Set <code>FontFamily</code> to <code>Mobius-System-Icons</code> and set Text to the glyph char or entity, e.g. <code>&amp;#xE000;</code>.</div>
+		<div>Download <a href="Mobius-System-Icons.ttf"><span class="mobius-font"></span>Mobius-System-Icons.ttf</a></div>
+      <!--<div><strong>WPF tip:</strong> Set <code>FontFamily</code> to <code>Mobius-System-Icons</code> and set Text to the glyph char or entity, e.g. <code>&amp;#xE000;</code>.</div>-->
       <div>Copy buttons below give you: glyph name (filename), unicode escape (for code), XAML entity, or the actual character.</div>
     </div>
 
