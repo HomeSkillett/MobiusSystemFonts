@@ -146,6 +146,10 @@
         const btns = document.createElement('div');
         btns.className = 'btns';
 
+        const b4 = document.createElement('button');
+        b4.textContent = 'Copy char';
+        b4.onclick = () => copyText(char);
+
         const b1 = document.createElement('button');
         b1.textContent = 'Copy name';
         b1.onclick = () => copyText(name);
@@ -158,14 +162,11 @@
         b3.textContent = 'Copy XAML';
         b3.onclick = () => copyText(xaml);
 
-        const b4 = document.createElement('button');
-        b4.textContent = 'Copy char';
-        b4.onclick = () => copyText(char);
-
+		  
+        btns.appendChild(b4);
         btns.appendChild(b1);
         btns.appendChild(b2);
         btns.appendChild(b3);
-        btns.appendChild(b4);
 
         body.appendChild(title);
         body.appendChild(code);
