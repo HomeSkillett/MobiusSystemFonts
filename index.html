@@ -25,7 +25,11 @@
 	.glyph:hover { background: #2EBEFC; color:#FFF; }
 	.glyph span { font-family: "Mobius-System-Icons"; font-size: 28px; line-height: 1; }
 	.mobius-font  { font-family: "Mobius-System-Icons"; line-height: 1; }
-    .name { font-weight: 600; font-size: 14px; margin: 0; }
+    .name { font-weight: 600; font-size: 14px; margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
+		text-overflow: ellipsis; }
     .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; opacity: 0.85; margin: 6px 0 10px; }
     .btns { display: flex; gap: 8px; flex-wrap: wrap; }
     button { font-size: 12px; padding: 6px 10px; border-radius: 10px; border: 1px solid rgba(127,127,127,0.35); background: transparent; cursor: pointer; }
